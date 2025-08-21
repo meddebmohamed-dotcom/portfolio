@@ -8,117 +8,92 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
   <!-- FontAwesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  <style>
-    body { background: #f8f9fa; }
-    section { padding: 60px 0; }
-    .icon-circle {
-      width: 80px;
-      height: 80px;
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      margin: 0 auto 20px;
-      color: white;
-      font-size: 32px;
-    }
-    .icon-cv { background: #007bff; }      /* bleu */
-    .icon-todo { background: #28a745; }   /* vert */
-    .icon-weather { background: #ffc107; }/* jaune */
-    .card { border: none; text-align: center; box-shadow: 0 2px 8px rgba(0,0,0,0.1); border-radius: 12px; }
-    footer { background: #003366; color: white; text-align: center; padding: 20px 0; }
-    .navbar { background-color: #003366; }
-    .navbar a { color: white !important; }
-    .navbar-brand { font-weight: bold; }
-  </style>
+  <link rel="stylesheet" href="style.css">
 </head>
-<body>
-  <!-- Navbar -->
-  <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
-    <div class="container">
-      <a class="navbar-brand" href="#">Portfolio Mohamed</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav ms-auto">
-          <li class="nav-item"><a class="nav-link" href="#about">Accueil</a></li>
-          <li class="nav-item"><a class="nav-link" href="#projects">Projets</a></li>
-          <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
-        </ul>
+<body class="bg-light">
+
+  <!-- Header -->
+  <header class="bg-primary text-white text-center py-5">
+    <h1>Portfolio - Mohamed Meddeb</h1>
+    <p>Chef de projet ERP & Développeur Web en formation</p>
+  </header>
+
+  <!-- Section Projets -->
+  <section class="container py-5">
+    <h2 class="text-center mb-5">🚀 Mes Projets</h2>
+
+    <!-- Ligne 1 : 3 projets -->
+    <div class="row justify-content-center">
+      <!-- Projet 1 : CV -->
+      <div class="col-md-4 mb-4">
+        <div class="card p-4 shadow-sm text-center">
+          <div class="icon-circle bg-success">
+            <i class="fas fa-id-card"></i>
+          </div>
+          <h5 class="card-title mt-3">CV en ligne</h5>
+          <p class="card-text">Présentation interactive de mon CV avec HTML & CSS.</p>
+          <a href="https://meddebmohamed-dotcom.github.io/formation-web/" target="_blank" class="btn btn-success">Voir le projet</a>
+        </div>
       </div>
-    </div>
-  </nav>
 
-  <!-- Accueil -->
-  <section id="about" class="text-center bg-light">
-    <div class="container">
-      <h1 class="fw-bold">🚀 Bonjour, je suis Mohamed Meddeb</h1>
-      <p class="lead text-secondary">Chef de projet ERP | Développeur Web en formation</p>
-    </div>
-  </section>
-
-  <!-- Projets -->
-  <section id="projects">
-    <div class="container">
-      <h2 class="text-center mb-5">Mes Projets</h2>
-      <div class="row">
-        <!-- Projet CV -->
-        <div class="col-md-4 mb-4">
-          <div class="card p-4">
-            <div class="icon-circle icon-cv">
-              <i class="fas fa-user-tie"></i>
-            </div>
-            <h5 class="card-title">Mon CV en ligne</h5>
-            <p class="card-text">CV interactif en HTML/CSS/Bootstrap hébergé sur GitHub Pages.</p>
-            <a href="https://meddebmohamed-dotcom.github.io/formation-web/cv.html" target="_blank" class="btn btn-primary">Voir le projet</a>
+      <!-- Projet 2 : To-do List -->
+      <div class="col-md-4 mb-4">
+        <div class="card p-4 shadow-sm text-center">
+          <div class="icon-circle bg-warning">
+            <i class="fas fa-list-check"></i>
           </div>
+          <h5 class="card-title mt-3">To-do List</h5>
+          <p class="card-text">Application simple pour gérer ses tâches avec LocalStorage.</p>
+          <a href="https://meddebmohamed-dotcom.github.io/todo-app/" target="_blank" class="btn btn-warning">Voir le projet</a>
         </div>
+      </div>
 
-        <!-- Projet To-do list -->
-        <div class="col-md-4 mb-4">
-          <div class="card p-4">
-            <div class="icon-circle icon-todo">
-              <i class="fas fa-tasks"></i>
-            </div>
-            <h5 class="card-title">To-Do List</h5>
-            <p class="card-text">Application simple en JavaScript pour gérer ses tâches.</p>
-            <a href="https://meddebmohamed-dotcom.github.io/todo-list/" target="_blank" class="btn btn-primary">Voir le projet</a>
+      <!-- Projet 3 : Application Météo -->
+      <div class="col-md-4 mb-4">
+        <div class="card p-4 shadow-sm text-center">
+          <div class="icon-circle bg-info">
+            <i class="fas fa-cloud-sun"></i>
           </div>
-        </div>
-
-        <!-- Projet Météo -->
-        <div class="col-md-4 mb-4">
-          <div class="card p-4">
-            <div class="icon-circle icon-weather">
-              <i class="fas fa-cloud-sun"></i>
-            </div>
-            <h5 class="card-title">Application Météo</h5>
-            <p class="card-text">Consultez la météo en temps réel grâce à l’API OpenWeather.</p>
-            <a href="https://meddebmohamed-dotcom.github.io/weather-app/" target="_blank" class="btn btn-primary">Voir le projet</a>
-          </div>
+          <h5 class="card-title mt-3">Application Météo</h5>
+          <p class="card-text">App météo utilisant l'API OpenWeatherMap pour afficher la météo des villes.</p>
+          <a href="https://meddebmohamed-dotcom.github.io/weather-app/" target="_blank" class="btn btn-info">Voir le projet</a>
         </div>
       </div>
     </div>
-  </section>
 
-  <!-- Contact -->
-  <section id="contact" class="bg-light">
-    <div class="container text-center">
-      <h2>📩 Contact</h2>
-      <p class="lead">N’hésitez pas à me contacter pour vos projets ERP ou Web</p>
-      <p>Email : <a href="mailto:meddebmohamed@gmail.com">meddebmohamed@gmail.com</a></p>
-      <p>LinkedIn : <a href="https://www.linkedin.com/in/meddebmohamed" target="_blank">linkedin.com/in/meddebmohamed</a></p>
-      <p>GitHub : <a href="https://github.com/meddebmohamed-dotcom" target="_blank">github.com/meddebmohamed-dotcom</a></p>
+    <!-- Ligne 2 : 2 projets centrés -->
+    <div class="row justify-content-center">
+      <!-- Projet 4 : Portfolio -->
+      <div class="col-md-4 mb-4">
+        <div class="card p-4 shadow-sm text-center">
+          <div class="icon-circle bg-danger">
+            <i class="fas fa-briefcase"></i>
+          </div>
+          <h5 class="card-title mt-3">Portfolio</h5>
+          <p class="card-text">Mon portfolio personnel regroupant tous mes projets web.</p>
+          <a href="https://meddebmohamed-dotcom.github.io/portfolio/" target="_blank" class="btn btn-danger">Voir le projet</a>
+        </div>
+      </div>
+
+      <!-- Projet 5 : Mini Blog CRUD -->
+      <div class="col-md-4 mb-4">
+        <div class="card p-4 shadow-sm text-center">
+          <div class="icon-circle bg-purple" style="background:#6f42c1;">
+            <i class="fas fa-blog"></i>
+          </div>
+          <h5 class="card-title mt-3">Mini Blog CRUD</h5>
+          <p class="card-text">Application blog avec création, lecture, modification et suppression d’articles (CRUD) via LocalStorage.</p>
+          <a href="https://meddebmohamed-dotcom.github.io/MINI-BLOG/" target="_blank" class="btn btn-primary">Voir le projet</a>
+        </div>
+      </div>
     </div>
   </section>
 
   <!-- Footer -->
-  <footer>
+  <footer class="bg-dark text-white text-center py-3">
     <p>&copy; 2025 Mohamed Meddeb - Tous droits réservés</p>
   </footer>
 
-  <!-- Bootstrap JS -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
